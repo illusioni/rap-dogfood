@@ -6,5 +6,9 @@
 GET     /                           controllers.Application.index
 GET     /time                       controllers.Application.time
 
+
+# The favicon (displayed next to the page title on the browser tab)
+GET     /favicon.png                controllers.Assets.at(path="/public", file="/images/favicon.png")
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
