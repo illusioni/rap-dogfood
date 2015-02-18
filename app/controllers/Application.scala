@@ -18,9 +18,9 @@ object Application extends Controller {
     Ok(views.html.index(dateFormatter.print(time)))
   }
 
-  // [] square brackets
-  // () parenthesis
-  // <>
+  // () parentheses
+  // [] (square) brackets
   // {} braces (curly brackets)
+  // <> chevrons (angle brackets)
 
 }
