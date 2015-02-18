@@ -15,7 +15,7 @@ object Application extends Controller {
 
   def time = Action {
     val time = new DateTime()
-    Ok(views.html.index(dateFormatter.print(time)))
+    Ok(views.html.time(dateFormatter.print(time)))
   }
 
   // () parentheses
