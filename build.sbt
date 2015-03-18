@@ -12,6 +12,3 @@ libraryDependencies ++= Seq(
   cache,
   ws
 )
-
-
-fork in run := true
