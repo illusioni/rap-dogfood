@@ -13,3 +13,10 @@ dist
 /.project
 /RUNNING_PID
 /.settings
+*-shim.sbt
+.sbtserver
+project/.sbtserver
+build.sbt
+project/sbt-ui.sbt
+project/play-fork-run.sbt
+project/.sbtserver.lock
