@@ -5,6 +5,7 @@
 # Home page
 GET     /                           controllers.Application.index
 GET     /time                       controllers.Application.time
+GET     /jbs                        controllers.Application.jbs
 
 
 # The favicon (displayed next to the page title on the browser tab)
