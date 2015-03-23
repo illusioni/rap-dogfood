@@ -2,8 +2,18 @@
 
 @main("RAP jbs") {
 
-    <b>Welcome to my page!</b>
-    Here's a random number:
-    @randNum
+    <p>
+        <b>Welcome to my page!</b>
+        <br/>
+        Please enjoy the following random integer, which is less than 2^16 yet not less than 0:
+    </p>
+
+    <p class="fancy-number">
+        @randNum
+    </p>
+
+    <p>
+        Note: if you were hoping for a different random integer, please try refreshing this page.
+    </p>
 
 }

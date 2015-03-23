@@ -7,9 +7,9 @@ import org.joda.time.format.DateTimeFormat
 object Application extends Controller {
 
   val dateFormatter = DateTimeFormat.forPattern("HH:mm:ss")
-  val randomNumber = 4 // This number was chosen randomly
+  val randomNumberGenerator = new scala.util.Random
 
-  def index = Action {
+    def index = Action {
     //computation here
     Ok(views.html.index("Hi, let's dogfood! :-)"))
   }
@@ -20,8 +20,9 @@ object Application extends Controller {
   }
 
   def jbs = Action {
-    //Jeremy's page which displays a random number
-    Ok(views.html.jbs(randomNumber.toString()))
+    //Jeremy's page which displays a random number between 0 and 'randomCeiling'
+    val randomCeiling = scala.math.pow(2, 16).toInt
+    Ok(views.html.jbs(randomNumberGenerator.nextInt(randomCeiling).toString()))
   }
 
   // () parentheses
