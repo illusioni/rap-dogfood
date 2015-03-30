@@ -9,7 +9,7 @@ object Application extends Controller {
   val dateFormatter = DateTimeFormat.forPattern("HH:mm:ss")
   val randomNumberGenerator = new scala.util.Random
 
-    def index = Action {
+  def index = Action {
     //computation here
     Ok(views.html.index("Hi, let's dogfood! :-)"))
   }
