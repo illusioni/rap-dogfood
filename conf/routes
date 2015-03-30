@@ -4,6 +4,7 @@
 
 # Home page
 GET     /                           controllers.Application.index
+GET     /kibbles                    controllers.Application.kibbles
 GET     /time                       controllers.Application.time
 GET     /jbs                        controllers.Application.jbs
 

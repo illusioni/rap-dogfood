@@ -14,6 +14,10 @@ object Application extends Controller {
     Ok(views.html.index("Hi, let's dogfood! :-)"))
   }
 
+  def kibbles = Action {
+    Ok(views.html.kibbles("Some kibbles (i.e. bits of the dogfood app) will go here."))
+  }
+
   def time = Action {
     val time = new DateTime()
     Ok(views.html.time(dateFormatter.print(time)))
