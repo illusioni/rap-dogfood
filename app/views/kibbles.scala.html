@@ -1,11 +1,21 @@
-@(kibbles: String)
+@(timerVal: String)
 
-@main("RAP kibbles") {
+@main("RAP Kibbles") {
 
     <p>
-        Welcome to the Kibbles page
-        <br>
-        <b>@kibbles</b>
+        Welcome to the Kibbles page!
     </p>
+
+    <p class="prominent">
+        <b>@timerVal</b>
+    </p>
+
+    <form action="@routes.Application.startTimer" method="post">
+        <button>Start Timer</button>
+    </form>
+
+    <form action="@routes.Application.pauseTimer" method="post">
+        <button>Pause Timer</button>
+    </form>
 
 }

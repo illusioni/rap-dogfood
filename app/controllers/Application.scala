@@ -15,7 +15,15 @@ object Application extends Controller {
   }
 
   def kibbles = Action {
-    Ok(views.html.kibbles("Some kibbles (i.e. bits of the dogfood app) will go here."))
+    Ok(views.html.kibbles("Please give this timer a try!"))
+  }
+
+  def startTimer = Action {
+    Ok(views.html.kibbles("Timer started, now get to work!"))
+  }
+
+  def pauseTimer = Action {
+    Ok(views.html.kibbles("Timer paused. Enjoy your break."))
   }
 
   def time = Action {

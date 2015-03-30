@@ -4,7 +4,13 @@
 
 # Home page
 GET     /                           controllers.Application.index
+
+# Kibbles page
 GET     /kibbles                    controllers.Application.kibbles
+POST    /startTimer                 controllers.Application.startTimer
+POST    /pauseTimer                 controllers.Application.pauseTimer
+
+# Other pages
 GET     /time                       controllers.Application.time
 GET     /jbs                        controllers.Application.jbs
 
