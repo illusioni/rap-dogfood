@@ -10,12 +10,9 @@
         <b>@timerVal</b>
     </p>
 
-    <form action="@routes.Application.startTimer" method="post">
-        <button>Start Timer</button>
-    </form>
-
-    <form action="@routes.Application.pauseTimer" method="post">
-        <button>Pause Timer</button>
+    <form method="post">
+        <button formaction="@routes.Application.startTimer">Start Timer</button>
+        <button formaction="@routes.Application.pauseTimer">Pause Timer</button>
     </form>
 
 }
