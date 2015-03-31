@@ -14,16 +14,27 @@ object Application extends Controller {
     Ok(views.html.index("Hi, let's dogfood! :-)"))
   }
 
+  class BasicTimer {
+    var message = "Please give this timer a try!"
+    def start() {message = "Timer started, now get to work!"}
+    def pause() {message = "Timer paused. Enjoy your break."}
+    def check = message
+  }
+
+  val myTimer = new BasicTimer
+
   def kibbles = Action {
-    Ok(views.html.kibbles("Please give this timer a try!"))
+    Ok(views.html.kibbles(myTimer.check))
   }
 
   def startTimer = Action {
-    Ok(views.html.kibbles("Timer started, now get to work!"))
+    myTimer.start()
+    Ok(views.html.kibbles(myTimer.check))
   }
 
   def pauseTimer = Action {
-    Ok(views.html.kibbles("Timer paused. Enjoy your break."))
+    myTimer.pause()
+    Ok(views.html.kibbles(myTimer.check))
   }
 
   def time = Action {
