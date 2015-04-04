@@ -5,6 +5,8 @@
 # Home page
 GET     /                           controllers.Application.index
 GET     /time                       controllers.Application.time
+GET     /timer/start                controllers.Application.startTimer
+# GET     /timer/status               controllers.Application.timerStatus
 GET     /jbs                        controllers.Application.jbs
 
 

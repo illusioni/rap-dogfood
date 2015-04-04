@@ -20,3 +20,4 @@ build.sbt
 project/sbt-ui.sbt
 project/play-fork-run.sbt
 project/.sbtserver.lock
+.DS_Store

@@ -3,6 +3,7 @@ package controllers
 import play.api.mvc._
 import org.joda.time.DateTime
 import org.joda.time.format.DateTimeFormat
+import org.rapdogfood.Timer
 
 object Application extends Controller {
 
@@ -24,6 +25,13 @@ object Application extends Controller {
     val randomCeiling = scala.math.pow(2, 16).toInt
     Ok(views.html.jbs(randomNumberGenerator.nextInt(randomCeiling).toString()))
   }
+
+  def startTimer = Action {
+    //"timer" is the model
+    val timer = new Timer()
+    Ok(views.html.timerStatus(timer))
+  }
+
 
   // () parentheses
   // [] (square) brackets

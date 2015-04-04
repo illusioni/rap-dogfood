@@ -1,0 +1,8 @@
+@(timer: org.rapdogfood.Timer)
+
+@main("Your timer status") {
+
+    <img src="@routes.Assets.at("images/clock.svg")" class="inline-icon">
+    The timer has been running since @timer.runningSince seconds.
+
+}
