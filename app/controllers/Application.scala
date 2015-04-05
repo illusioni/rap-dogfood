@@ -26,12 +26,6 @@ object Application extends Controller {
     Ok(views.html.jbs(randomNumberGenerator.nextInt(randomCeiling).toString()))
   }
 
-  def startTimer = Action {
-    //"timer" is the model
-    val timer = new Timer()
-    Ok(views.html.timerStatus(timer))
-  }
-
 
   // () parentheses
   // [] (square) brackets

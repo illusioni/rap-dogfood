@@ -1,8 +1,21 @@
 @(timer: org.rapdogfood.Timer)
 
+@import org.rapdogfood.RunningTimer
+@import org.rapdogfood.StoppedTimer
+
 @main("Your timer status") {
 
     <img src="@routes.Assets.at("images/clock.svg")" class="inline-icon">
-    The timer has been running since @timer.runningSince seconds.
+
+    @timer match {
+        case rt:RunningTimer => {
+            Your timer has been running since @rt.runningFor seconds.
+            Do you want to <a href="/timer/stop">stop it</a>?
+        }
+        case st:StoppedTimer => {
+            Your timer was stopped after @st.overallTime seconds.
+            Do you want to <a href="/timer/start">start a new one</a>?
+        }
+    }
 
 }

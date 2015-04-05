@@ -1,18 +1,20 @@
 package org.rapdogfood
 
-import scala.util.Random
+abstract class Timer {
 
-class Timer {
+  def toPersistentString:String
 
-  def start() = {
-    println("Timer was started")
+}
+
+
+object Timer {
+
+  def startNew:Timer = {
+    new RunningTimer
   }
 
-  /**
-   * @return the timer's up-time since it was started in seconds
-   */
-  def runningSince = {
-    //TODO implement this
-    new Random().nextInt(scala.math.pow(2, 16).toInt)
+  def fromPersistentString(str:String):Timer = {
+    RunningTimer.fromPersistentString(str).getOrElse(StoppedTimer.fromPersistentString(str).get)
   }
+
 }
