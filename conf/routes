@@ -8,6 +8,7 @@ GET     /                           controllers.Application.index
 GET     /time                       controllers.Application.time
 GET     /jbs                        controllers.Application.jbs
 
+# Timer page(s)
 GET     /timer/start                controllers.TimerController.startTimer
 GET     /timer/status               controllers.TimerController.timerStatus
 GET     /timer/stop                 controllers.TimerController.stopTimer
